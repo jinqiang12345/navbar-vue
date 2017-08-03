@@ -1,7 +1,7 @@
 <template>
   <div class="navbar">
     <ul class="menu">
-      <li class="menuitem animated" :style="item.delay" v-for="item in items" :key="item.index"><i class="fa" :class="item.class" aria-hidden="true"></i>{{ item.text }}</li>
+      <li class="menuitem animated" v-for="item in items" :key="item.index"><i class="fa" :class="item.class" aria-hidden="true"></i>{{ item.text }}</li>
     </ul>
   </div>
 </template>
@@ -11,12 +11,12 @@ export default {
   data () {
     return {
       items: [
-        {class: 'fa-address-book', delay: 'animation-delay: 0.5s', text: '导航一'},
-        {class: 'fa-bandcamp', delay: 'animation-delay: 1s', text: '导航二'},
-        {class: 'fa-etsy', delay: 'animation-delay: 1.5s', text: '导航三'},
-        {class: 'fa-id-badge', delay: 'animation-delay: 2s', text: '导航四'},
-        {class: 'fa-quora', delay: 'animation-delay: 2.5s', text: '导航五'},
-        {class: 'fa-snowflake-o', delay: 'animation-delay: 3s', text: '导航六'}
+        {class: 'fa-address-book', text: '导航一'},
+        {class: 'fa-bandcamp', text: '导航二'},
+        {class: 'fa-etsy', text: '导航三'},
+        {class: 'fa-id-badge', text: '导航四'},
+        {class: 'fa-quora', text: '导航五'},
+        {class: 'fa-snowflake-o', text: '导航六'}
       ]
     }
   }
@@ -71,6 +71,7 @@ export default {
     height: 30px;
     font-size: 0.9em;
     font-style: italic;
+    font-weight: lighter;
     line-height: 30px;
     text-align: center;
     color: #fff;
@@ -98,6 +99,9 @@ export default {
     -o-fliter: blur(2px);
     -ms-fliter: blur(2px);
     -moz-fliter: blur(2px);
+  }
+  .menu li:hover i {
+    font-size: 20px;
   }
   .fa {
     margin-right: 5%;
