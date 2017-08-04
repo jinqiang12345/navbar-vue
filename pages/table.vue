@@ -1,35 +1,7 @@
 <template>
  <div style="width:100%">
-   <b-navbar toggleable type="inverse" class="navbar">
-    <b-nav-toggle target="nav_collapse"></b-nav-toggle>
-    <b-link class="navbar-brand" to="#">
-      <span>vue</span>
-    </b-link>
-    <b-collapse is-nav id="nav_collapse">
-      <b-nav is-nav-bar>
-        <b-nav-item class="menu">Support</b-nav-item>
-        <b-nav-item class="menu">Docs</b-nav-item>
-        <b-nav-item class="menu">Contact Us</b-nav-item>
-      </b-nav>
-      <b-nav is-nav-bar class="ml-auto">
-        <!-- Navbar dropdowns -->
-        <b-nav-item-dropdown text="Lang" right>
-          <b-dropdown-item to="#" class="Langitem">EN</b-dropdown-item>
-          <b-dropdown-item to="#" class="Langitem">ES</b-dropdown-item>
-          <b-dropdown-item to="#" class="Langitem">RU</b-dropdown-item>
-          <b-dropdown-item to="#" class="Langitem">FA</b-dropdown-item>
-        </b-nav-item-dropdown>
-        <b-nav-item-dropdown right>
-          <!-- Using button-content slot -->
-          <template slot="button-content">
-            <span style="font-weight: bold;">User</span>
-          </template>
-          <b-dropdown-item to="#" class="Langitem">Profile</b-dropdown-item>
-          <b-dropdown-item to="#" class="Langitem">Signout</b-dropdown-item>
-        </b-nav-item-dropdown>
-      </b-nav>
-    </b-collapse>
-  </b-navbar>
+   <b-modal ref="modal1" title="Confirm To Delete This Row" @ok="ok"></b-modal>
+   <headtop/>
    <div class="my-1 row" style="width: 100%; padding-top:20px">
      <div class="col-6">
        <b-form-fieldset horizontal label="Rows per page" :label-cols="6">
@@ -57,7 +29,7 @@
              {{item.value?'Yes :)':'No :('}}
            </template>
            <template slot="actions" scope="item">
-             <b-btn size="sm" @click="details(item.item)">Details</b-btn>
+             <b-btn class="danger" size="sm" @click="remove(item.$index, items)">remove</b-btn>
            </template>
       </b-table>
      <div class="justify-content-center my-1">
@@ -67,6 +39,7 @@
 </template>
 
 <script>
+import headtop from '~/components/headtop.vue'
 export default {
   data () {
     return {
@@ -113,14 +86,22 @@ export default {
           label: 'Actions'
         }
       },
+      index: 0,
       currentPage: 1,
       perPage: 5,
       filter: null
     }
   },
+  components: {
+    headtop
+  },
   methods: {
-    details (item) {
-      alert(JSON.stringify(item))
+    remove (index, rows) {
+      this.index = index
+      this.$refs.modal1.show()
+    },
+    ok () {
+      this.items.splice(this.index, 1)
     }
   }
 }
@@ -144,4 +125,9 @@ export default {
     background-color: #3b8070;
     border: none;
   }
+  .danger {
+    background-color: #d9534f;
+    color: #fff;
+  }
+
 </style>

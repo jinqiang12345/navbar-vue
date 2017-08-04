@@ -1,7 +1,10 @@
 <template>
   <div>
-    <p>Hi from {{ name }}</p>
-    <nuxt-link to="/">Home page</nuxt-link>
+    <b-button @click="$store.commit('decrement')" class="btn">{{ $store.state.counter }}</b-button>
+    <b-button class="btn">{{ $store.state.zz }}</b-button>
+    <b-button class="btn"><nuxt-link to="/" class="no-style">Home page</nuxt-link></b-button>
+    <b-button class="btn"><nuxt-link to="/nav" class="no-style">Nav</nuxt-link></b-button>
+    <b-button class="btn"><nuxt-link to="/vuex" class="no-style">Vuex</nuxt-link></b-button>
     <b-button v-for="user in users" :key="user.id"  class="btn">
       <nuxt-link :to="'/users/'+user.id" class="no-style">{{ user.name }}</nuxt-link>
     </b-button>
@@ -24,14 +27,16 @@ export default {
   }
   .btn {
     background-color: #3b8070;
-    display: inline-block;
+    display: block;
+    margin: 0 auto;
+    color: #fff;
   }
   .btn:hover {
-    background-color: #fff;
-    filter: blur(1px);
+    transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -webkit-transform: scale(1.2);
   }
   .btn:hover .no-style {
-    color: #3b8070;
     text-decoration: line-through;
   }
 </style>

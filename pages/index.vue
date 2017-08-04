@@ -5,16 +5,10 @@
       <h1 class="title">
         NUXT
       </h1>
-      <h2 class="subtitle">
-        Universal Vue.js Application
-      </h2>
-      <nuxt-link to="/about" class="about">About page</nuxt-link>
-      <nuxt-link to="/table" class="about">Table</nuxt-link>
-      <nuxt-link to="/navbar" class="about">nav</nuxt-link>
-      <div class="links">
-        <a href="https://nuxtjs.org/" target="_blank" class="button--green">Documentation</a>
-        <a href="https://github.com/nuxt/nuxt.js" target="_blank" class="button--grey">GitHub</a>
-      </div>
+      <nuxt-link to="/about" class="about">About page</nuxt-link><br>
+      <nuxt-link to="/table" class="about">Table</nuxt-link><br>
+      <nuxt-link to="/nav" class="about">nav</nuxt-link><br>
+      <nuxt-link to="/vuex" class="about">vuex</nuxt-link><br>
     </div>
   </section>
 </template>
