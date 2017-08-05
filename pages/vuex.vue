@@ -1,48 +1,34 @@
 <template>
   <div>
-    <p style="text-align: center">
-      <br>
-      <b-tooltip content="+1">
-        <b-btn variant="outline-success" @click="increment">{{ counter }}</b-btn>
-      </b-tooltip>
-      <br>
-      <br>
-      <br>
-      <b-tooltip content="pp">
-        <b-btn variant="outline-success" @click="setzz">{{ zz }}</b-btn>
-      </b-tooltip>
-      <br>
-      <br>
-      <br>
+    <p style="text-align: center;margin-top:50px">
       <b-tooltip content="about">
-        <b-btn variant="outline-success" @click="setzz"><nuxt-link to="/about" class="no-style">About</nuxt-link></b-btn>
+        <b-btn variant="outline-success"><nuxt-link to="/about" class="no-style">About</nuxt-link></b-btn>
       </b-tooltip>
-      <br>
-      <br>
-      <br>
       <b-tooltip content="home">
-        <b-btn variant="outline-success" @click="setzz"><nuxt-link to="/home" class="no-style">Home</nuxt-link></b-btn>
+        <b-btn variant="outline-success"><nuxt-link to="/" class="no-style">Home</nuxt-link></b-btn>
       </b-tooltip>
-      <br>
-      <br>
-      <br>
       <b-tooltip content="nav">
-        <b-btn variant="outline-success" @click="setzz"><nuxt-link to="/nav" class="no-style">Nav</nuxt-link></b-btn>
+        <b-btn variant="outline-success"><nuxt-link to="/nav" class="no-style">Nav</nuxt-link></b-btn>
       </b-tooltip>
+      <br>
+      <p style="width:400px;margin: 0 auto">
+      <productlist/>
+      <br>
+      <br>
+      <cart/>
+      </p>
     </p>
   </div>
 </template>
 
 <script>
-  import { mapState } from 'vuex'
+  import productlist from '~/components/productlist.vue'
+  import cart from '~/components/cart.vue'
 
   export default {
-    computed: mapState([
-      'counter', 'zz'
-    ]),
-    methods: {
-      increment () { this.$store.commit('increment') },
-      setzz () { this.$store.commit('setzz', 'pp') }
+    components: {
+      productlist,
+      cart
     }
   }
 </script>

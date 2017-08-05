@@ -13,7 +13,7 @@ export default {
       items: [
         {class: 'fa-address-book', width: 'height:300px', text: '导航六'},
         {class: 'fa-bandcamp', width: 'height:270px', text: '导航五'},
-        {class: 'fa-etsy', width: 'height:240px', text: '导航四'},
+        {class: 'fa-telegram', width: 'height:240px', text: '导航四'},
         {class: 'fa-superpowers', width: 'height:210px', text: '导航三'},
         {class: 'fa-quora', width: 'height:180px', text: '导航二'},
         {class: 'fa-snowflake-o', width: 'height:150px', text: '导航一'}

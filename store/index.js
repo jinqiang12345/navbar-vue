@@ -1,14 +1,17 @@
 import Vuex from 'vuex'
-
-import mutations from './mutations'
+import * as actions from './actions'
+import * as getters from './getters'
+import cart from './modules/cart'
+import products from './modules/products'
 
 const createStore = () => {
   return new Vuex.Store({
-    state: {
-      counter: 0,
-      zz: 'change'
-    },
-    mutations
+    actions,
+    getters,
+    modules: {
+      cart,
+      products
+    }
   })
 }
 

@@ -1,7 +1,5 @@
 <template>
   <div>
-    <b-button @click="$store.commit('decrement')" class="btn">{{ $store.state.counter }}</b-button>
-    <b-button class="btn">{{ $store.state.zz }}</b-button>
     <b-button class="btn"><nuxt-link to="/" class="no-style">Home page</nuxt-link></b-button>
     <b-button class="btn"><nuxt-link to="/nav" class="no-style">Nav</nuxt-link></b-button>
     <b-button class="btn"><nuxt-link to="/vuex" class="no-style">Vuex</nuxt-link></b-button>
