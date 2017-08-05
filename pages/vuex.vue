@@ -1,6 +1,6 @@
 <template>
   <div>
-    <p style="text-align: center;margin-top:50px">
+    <div style="text-align: center;margin-top:50px">
       <b-tooltip content="about">
         <b-btn variant="outline-success"><nuxt-link to="/about" class="no-style">About</nuxt-link></b-btn>
       </b-tooltip>
@@ -10,14 +10,14 @@
       <b-tooltip content="nav">
         <b-btn variant="outline-success"><nuxt-link to="/nav" class="no-style">Nav</nuxt-link></b-btn>
       </b-tooltip>
+    </div>
       <br>
-      <p style="width:400px;margin: 0 auto">
+    <div style="width:400px;margin: 0 auto">
       <productlist/>
       <br>
       <br>
       <cart/>
-      </p>
-    </p>
+    </div>
   </div>
 </template>
 
