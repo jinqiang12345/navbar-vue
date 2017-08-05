@@ -7,7 +7,7 @@
      </b-link>
      <b-collapse is-nav id="nav_collapse">
        <b-nav is-nav-bar>
-         <b-nav-item class="menu"><nuxt-link to="/about" class="no-style">About page</nuxt-link></b-nav-item>
+         <b-nav-item class="menu"><nuxt-link to="/about" class="no-style">Axios</nuxt-link></b-nav-item>
          <b-nav-item class="menu"><nuxt-link to="/nav" class="no-style">Nav</nuxt-link></b-nav-item>
          <b-nav-item class="menu"><nuxt-link to="/vuex" class="no-style">Vuex</nuxt-link></b-nav-item>
        </b-nav>

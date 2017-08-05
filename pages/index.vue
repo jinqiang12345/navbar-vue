@@ -5,7 +5,7 @@
       <h1 class="title">
         NUXT
       </h1>
-      <nuxt-link to="/about" class="about">About page</nuxt-link><br>
+      <nuxt-link to="/about" class="about">Axios</nuxt-link><br>
       <nuxt-link to="/table" class="about">Table</nuxt-link><br>
       <nuxt-link to="/nav" class="about">nav</nuxt-link><br>
       <nuxt-link to="/vuex" class="about">vuex</nuxt-link><br>

@@ -2,7 +2,7 @@
   <div>
     <div style="text-align: center;margin-top:50px">
       <b-tooltip content="about">
-        <b-btn variant="outline-success"><nuxt-link to="/about" class="no-style">About</nuxt-link></b-btn>
+        <b-btn variant="outline-success"><nuxt-link to="/about" class="no-style">Axios</nuxt-link></b-btn>
       </b-tooltip>
       <b-tooltip content="home">
         <b-btn variant="outline-success"><nuxt-link to="/" class="no-style">Home</nuxt-link></b-btn>
