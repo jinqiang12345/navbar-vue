@@ -1,22 +1,18 @@
-# nuxt
-
+# navbar-vue
 > Nuxt.js project
+> 使用nuxt搭建的简单界面，包含一些vuex实例，axios实例，还使用了bootstrapUI。
 
-## Build Setup
+#### 项目运行
+>* npm i
+>* npm run dev
 
-``` bash
-# install dependencies
-$ npm install # Or yarn install
+#### 项目截图
 
-# serve with hot reload at localhost:3000
-$ npm run dev
-
-# build for production and launch server
-$ npm run build
-$ npm start
-
-# generate static project
-$ npm run generate
-```
-
-For detailed explanation on how things work, checkout the [Nuxt.js docs](https://github.com/nuxt/nuxt.js).
+![github](http://github.com/unicorn.png "github")
+![github](http://github.com/unicorn.png "github")
+![github](http://github.com/unicorn.png "github")
+![github](http://github.com/unicorn.png "github")
+![github](http://github.com/unicorn.png "github")
+![github](http://github.com/unicorn.png "github")
+![github](http://github.com/unicorn.png "github")
+![github](http://github.com/unicorn.png "github")
